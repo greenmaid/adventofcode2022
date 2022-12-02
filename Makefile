@@ -11,7 +11,7 @@ venv:
 	. py3_env/bin/activate && pip install --upgrade -r requirement.txt
 
 mypy:
-	mypy day*/*.py
+	@. py3_env/bin/activate && mypy day*/*.py
 
 run_day:
-	. py3_env/bin/activate && python ./day$(args)/day$(args).py
+	@. py3_env/bin/activate && python ./day$(args)/day$(args).py
