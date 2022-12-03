@@ -15,3 +15,6 @@ mypy:
 
 run_day:
 	@. py3_env/bin/activate && python ./day$(args)/day$(args).py
+
+run_all:
+	@. py3_env/bin/activate && for file in `ls ./day*/day*.py`; do echo -e "\n>> $$file"; python $$file; done

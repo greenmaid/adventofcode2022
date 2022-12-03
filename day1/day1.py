@@ -36,4 +36,5 @@ calories_per_elve = count_calories_per_elve(food_list)
 
 max_values = top3(calories_per_elve)
 print(f"Max 3 values are {max_values}")
-print(f"Sum = {sum(max_values)}")
+print(f"Part 1 result = {max_values[0]}")
+print(f"Part 2 result = {sum(max_values)}")
