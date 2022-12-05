@@ -6,10 +6,12 @@ from typing import List, Tuple
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 INPUT = f"{SCRIPT_DIR}/input.txt"
 
+
 def read_input(path: str) -> List[str]:
     with open(path, 'r') as f:
         lines = f.read().splitlines()
     return lines
+
 
 def get_score_from_char(char: str) -> int:
     if char == char.lower():
@@ -17,13 +19,14 @@ def get_score_from_char(char: str) -> int:
     else:
         return ord(char) - ord('A') + 27
 
+
 # Part 1 function
 #############################################
-
 def get_rucksack_containers(rucksack: str) -> Tuple[str, str]:
     length = len(rucksack)
     middle = int(length/2)
-    return (rucksack[:middle],rucksack[middle:])
+    return (rucksack[:middle], rucksack[middle:])
+
 
 def find_common_element_in_container(container: Tuple[str, str]) -> str:
     for i in container[0]:
@@ -35,8 +38,6 @@ def find_common_element_in_container(container: Tuple[str, str]) -> str:
 
 # Part 2 functions
 ###########################################
-
-
 def get_rucksack_groups(rucksacks: List[str]) -> List[Tuple[str, str, str]]:
     groups = []
     while rucksacks:
