@@ -113,17 +113,13 @@ def count_visible_trees(tree_map: List[List[int]]) -> int:
 
 def compute_scenic_score(tree_map: List[List[int]], x: int, y: int) -> int:
     top = compute_top_scenic_score(tree_map, x, y)
-    if top == 0:
-        return 0
+    if top == 0: return 0
     bottom = compute_bottom_scenic_score(tree_map, x, y)
-    if bottom == 0:
-        return 0
+    if bottom == 0: return 0
     left = compute_left_scenic_score(tree_map, x, y)
-    if left == 0:
-        return 0
+    if left == 0: return 0
     right = compute_right_scenic_score(tree_map, x, y)
-    if right == 0:
-        return 0
+    if right == 0: return 0
     return top * bottom * left * right
 
 
