@@ -72,7 +72,7 @@ class Directory:
         best_result = self
         for d in self.list_sub_directories():
             current_size = d.count_directory_size()
-            if current_size >=  size and current_size < best_result.count_directory_size():
+            if current_size >= size and current_size < best_result.count_directory_size():
                 best_result = d
         return best_result
 

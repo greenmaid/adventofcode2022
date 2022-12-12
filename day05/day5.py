@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import copy
 import os
 import re
 from typing import List, Dict
@@ -39,7 +38,7 @@ def read_stacks(path: str) -> Dict[int, List[str]]:
 
 
 def apply_order(crate_stacks: Dict[int, List[str]], order: str) -> Dict[int, List[str]]:
-    match = re.search('move (\d*) from (\d*) to (\d*)', order)
+    match = re.search(r'move (\d*) from (\d*) to (\d*)', order)
     if match:
         crate_count = int(match.group(1))
         source_stack = int(match.group(2))
@@ -57,7 +56,7 @@ def apply_orders(crate_stacks: Dict[int, List[str]], orders: List[str]) -> Dict[
 
 
 def apply_order_2(crate_stacks: Dict[int, List[str]], order: str) -> Dict[int, List[str]]:
-    match = re.search('move (\d*) from (\d*) to (\d*)', order)
+    match = re.search(r'move (\d*) from (\d*) to (\d*)', order)
     if match:
         crate_count = int(match.group(1))
         source_stack = int(match.group(2))

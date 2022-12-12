@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import os
-from typing import List
 
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 INPUT = f"{SCRIPT_DIR}/input.txt"

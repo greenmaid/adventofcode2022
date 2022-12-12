@@ -56,6 +56,7 @@ def test_part1():
         count += d.count_directory_size()
     assert count == 95437
 
+
 def test_part2():
     root = day7.build_fs_tree(test_listing)
     result = root.find_smallest_dir_greater_than(21618835)

@@ -3,10 +3,10 @@ import day6
 
 def test_signal_detection():
     data = "mjqjpqmgbljsphdztnvjfqwrcgsmlb"
-    assert day6.are_all_different(data[:4]) == False
+    assert day6.are_all_different(data[:4]) is False
 
     data = "jpqmgbljsphdztnvjfqwrcgsmlb"
-    assert day6.are_all_different(data[:4]) == True
+    assert day6.are_all_different(data[:4]) is True
 
 
 def test_detect_signal():

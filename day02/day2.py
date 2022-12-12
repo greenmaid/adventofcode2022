@@ -8,7 +8,7 @@ def read_input(path: str) -> List[Tuple[str, str]]:
     with open(path, 'r') as f:
         lines = f.read().splitlines()
 
-    return [(line[0],line[2]) for line in lines]
+    return [(line[0], line[2]) for line in lines]
 
 
 def compute_score_part1(match: Tuple[str, str]) -> int:

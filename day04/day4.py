@@ -14,7 +14,7 @@ def read_input(path: str) -> List[Tuple[Tuple[int, int], Tuple[int, int]]]:
 
     result = []
     for line in lines:
-        match = re.search('(\d*)-(\d*),(\d*)-(\d*)', line)
+        match = re.search(r'(\d*)-(\d*),(\d*)-(\d*)', line)
         if match:
             result.append(
                 (
