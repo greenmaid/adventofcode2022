@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import igraph as ig
+import igraph as ig  # type: ignore
 import os
 from typing import List, Tuple
 
